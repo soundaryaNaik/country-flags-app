@@ -1,12 +1,12 @@
-import axios from "axios"
+// src/api/api.jsx
+import axios from 'axios';
 
-export const BACKENDPOINT="https://restcountries.com/"
-
-export default async function countriesData(){
-    try{
-        const response= await axios.get(`${BACKENDPOINT}/v3.1/all`)
-        return response.data
-    }catch(e){
-        console.error(e)
-    }
-}
+export const fetchCountries = async () => {
+  try {
+    const response = await axios.get('https://xcountries-backend.azurewebsites.net/all');
+    return response.data;
+  } catch (error) {
+    console.error("Error fetching data: ", error);
+    return [];
+  }
+};

@@ -1,16 +1,29 @@
-.card{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: auto;
-    height: 10px !important;
-    color: black;
-    text-align: center;
-    border-radius: 10px;
+/* src/Countries/Countries.module.css */
+
+.container {
+  padding: 20px;
+  text-align: center;
 }
 
-.img{
-    height: 150px;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  margin-top: 20px;
 }
 
+.card {
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  width: 130px;
+  text-align: center;
+}
 
+.flag {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
